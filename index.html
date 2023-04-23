@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Tennis Courts Landing Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Tennis Courts</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Welcome to Our Tennis Courts</h2>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada diam eget diam sollicitudin commodo. Suspendisse et ultrices neque, ac maximus ex.</p>
+        </div>
+        <div class="col-md-6">
+          <img src="https://via.placeholder.com/500x300" class="img-fluid" alt="Tennis Courts">
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h3>Court Reservations</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada diam eget diam sollicitudin commodo.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h3>Tennis Lessons</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada diam eget diam sollicitudin commodo.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h3>Tennis Tournaments</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada diam eget diam sollicitudin commodo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <h2>About Our Tennis Courts</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada diam eget diam sollicitudin commodo.</p>
+<p>Nulla vel consectetur nulla. Duis nec dui tincidunt, interdum purus eget, vehicula nunc. Fusce id ex ligula. Maecenas venenatis velit nec mi venenatis sollicitudin. Fusce nec metus at turpis aliquam convallis. Nam dignissim ex a enim lacinia, eget blandit nulla bibendum. In blandit euismod lorem, ac sollicitudin mauris. In hac habitasse platea dictumst.</p>
+</div>
+</div>
+
+
+  <div class="row mt-5">
+    <div class="col-md-12">
+      <h2>Contact Us</h2>
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name="name">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email">
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" name="message" rows="5"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+    // activate the Bootstrap navbar dropdowns
+    var dropdownToggleList = [].slice.call(document.querySelectorAll('.navbar-toggler'));
+    dropdownToggleList.map(function (dropdownToggleEl) {
+      var dropdownMenuEl = dropdownToggleEl.nextElementSibling;
+      dropdownToggleEl.addEventListener('click', function (event) {
+        event.preventDefault();
+        if (!dropdownMenuEl.classList.contains('show')) {
+          dropdownMenuEl.classList.add('show');
+        } else {
+          dropdownMenuEl.classList.remove('show');
+        }
+      });
+    });
+  
+    // close the Bootstrap navbar dropdowns when clicking outside
+    document.addEventListener('click', function (event) {
+      var isDropdownToggle = event.target.closest('.navbar-dropdown-toggler');
+      if (!isDropdownToggle) {
+        var dropdownMenus = document.querySelectorAll('.navbar-dropdown-menu.show');
+        dropdownMenus.forEach(function (dropdownMenu) {
+          dropdownMenu.classList.remove('show');
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
