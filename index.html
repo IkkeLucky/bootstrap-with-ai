@@ -6,7 +6,14 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+    <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+
+  <!-- Include Bootstrap JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
   </head>
+
+
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -71,6 +78,79 @@
         </div>
       </div>
 
+      <button type="button" class="btn btn-outline-primary">Primary</button>
+      <button type="button" class="btn btn-outline-secondary">Secondary</button>
+      <button type="button" class="btn btn-outline-success">Success</button>
+      <button type="button" class="btn btn-outline-danger">Danger</button>
+      <button type="button" class="btn btn-outline-warning">Warning</button>
+      <button type="button" class="btn btn-outline-info">Info</button>
+      <button type="button" class="btn btn-outline-light">Light</button>
+      <button type="button" class="btn btn-outline-dark">Dark</button>
+
+      <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+          <button type="button" class="btn btn-secondary">1</button>
+          <button type="button" class="btn btn-secondary">2</button>
+          <button type="button" class="btn btn-secondary">3</button>
+          <button type="button" class="btn btn-secondary">4</button>
+        </div>
+        <div class="btn-group mr-2" role="group" aria-label="Second group">
+          <button type="button" class="btn btn-secondary">5</button>
+          <button type="button" class="btn btn-secondary">6</button>
+          <button type="button" class="btn btn-secondary">7</button>
+        </div>
+        <div class="btn-group" role="group" aria-label="Third group">
+          <button type="button" class="btn btn-secondary">8</button>
+        </div>
+      </div>
+
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          Link with href
+        </a>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Button with data-target
+        </button>
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+        </div>
+      </div>
+
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+      </p>
+      <div class="row">
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <div class="card card-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample2">
+            <div class="card card-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+
       <div class="row mt-5">
         <div class="col-md-12">
           <h2>About Our Tennis Courts</h2>
@@ -105,31 +185,54 @@
 
 
 <script>
-    // activate the Bootstrap navbar dropdowns
-    var dropdownToggleList = [].slice.call(document.querySelectorAll('.navbar-toggler'));
-    dropdownToggleList.map(function (dropdownToggleEl) {
-      var dropdownMenuEl = dropdownToggleEl.nextElementSibling;
-      dropdownToggleEl.addEventListener('click', function (event) {
-        event.preventDefault();
-        if (!dropdownMenuEl.classList.contains('show')) {
-          dropdownMenuEl.classList.add('show');
-        } else {
-          dropdownMenuEl.classList.remove('show');
-        }
-      });
-    });
-  
-    // close the Bootstrap navbar dropdowns when clicking outside
-    document.addEventListener('click', function (event) {
-      var isDropdownToggle = event.target.closest('.navbar-dropdown-toggler');
-      if (!isDropdownToggle) {
-        var dropdownMenus = document.querySelectorAll('.navbar-dropdown-menu.show');
-        dropdownMenus.forEach(function (dropdownMenu) {
-          dropdownMenu.classList.remove('show');
-        });
+  // activate the Bootstrap navbar dropdowns
+  var dropdownToggleList = [].slice.call(document.querySelectorAll('.navbar-toggler'));
+  dropdownToggleList.map(function (dropdownToggleEl) {
+    var dropdownMenuEl = dropdownToggleEl.nextElementSibling;
+    dropdownToggleEl.addEventListener('click', function (event) {
+      event.preventDefault();
+      if (!dropdownMenuEl.classList.contains('show')) {
+        dropdownMenuEl.classList.add('show');
+      } else {
+        dropdownMenuEl.classList.remove('show');
       }
     });
-  </script>
+  });
+
+  // close the Bootstrap navbar dropdowns when clicking outside
+  document.addEventListener('click', function (event) {
+    var isDropdownToggle = event.target.closest('.navbar-dropdown-toggler');
+    if (!isDropdownToggle) {
+      var dropdownMenus = document.querySelectorAll('.navbar-dropdown-menu.show');
+      dropdownMenus.forEach(function (dropdownMenu) {
+        dropdownMenu.classList.remove('show');
+      });
+    }
+  });
+</script>
+
+
+<script>
+  // Function to activate Bootstrap dropdowns and collapsible elements
+  function activateBootstrapComponents() {
+    // Activate dropdowns
+    var dropdowns = [].slice.call(document.querySelectorAll('[data-toggle="dropdown"]'));
+    dropdowns.map(function (dropdown) {
+      return new bootstrap.Dropdown(dropdown);
+    });
+
+    // Activate collapsible elements
+    var collapses = [].slice.call(document.querySelectorAll('[data-toggle="collapse"]'));
+    collapses.map(function (collapse) {
+      return new bootstrap.Collapse(collapse);
+    });
+  }
+
+  // Wait for the page to load before activating Bootstrap components
+  document.addEventListener('DOMContentLoaded', function () {
+    activateBootstrapComponents();
+  });
+</script>
 
 </body>
 </html>
